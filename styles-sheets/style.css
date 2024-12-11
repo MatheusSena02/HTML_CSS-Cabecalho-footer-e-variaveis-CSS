@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap'); /*Importar a fonte de uma fonte externa*/
+
+:root{
+    --cor-primaria: #11225f;
+    --cor-secundaria: #F5E2C8;
+    --cor-tercearia: #bd1e1e;
+    --fonte-principal: "Share Tech Mono", monospace;
+    --cor-fundo-hover: #6f8dfc; 
+}
+* { /* Refere-se a todos os elementos da página */
+    margin : 0px;
+    padding : 0px;          /* RESET CSS */
+}
+
+body{
+    /* height: 100vh = 100% viewport height = O body ocupa 100% da altura da tela */
+    box-sizing: border-box;
+    overflow : scroll;
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);        /* Cor de todos os textos */
+    font-family: var(--fonte-principal);
+}
+.cabecalho__menu{
+    display : flex;
+    justify-content: space-between;
+    padding: 2% 8% 0% 3%;
+    font-size: 24px;
+}
+
+.cabecalho__menu__links{
+    border: transparent;
+    text-decoration: none;
+    color: var(--cor-secundaria);
+    padding: 1% 3%;
+    gap : 5px;
+    border: 2px solid transparent;
+    border-radius: 16px;
+    cursor : pointer;
+    transition: 0.6s;
+}
+
+.cabecalho__menu__links:hover{
+    background-color: var(--cor-fundo-hover);
+    border: 2px solid transparent;
+    color: var(--cor-primaria);
+}
+.container-main{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5% 14% 0% 14%;
+}
+.container-main__conteudo{
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap : 20px;
+}
+
+.container-main__conteudo__destaque-lista{
+    color: var(--cor-tercearia);
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.container-main__conteudo__titulo-principal{
+    font-size: 50px;
+}
+
+.container-main__conteudo__subtitulo-principal{
+    font-style: italic;
+}
+
+.container-main__conteudo__lista{
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.container-main__conteudo__links{           /*Disposição dos botões*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 7%;
+    width: 520px;
+    gap : 25px;
+}
+
+.container-main__conteudo__links__título-botoes{
+    display: flex;
+    justify-content: center;
+    margin : 0%;
+    padding-top: 7%;
+    font-size: 30px;
+}
+.container-main__conteudo__links__botao{
+    display: inline-block; /* Permitir que a tag <a> possa ser trabalhada com o comportamento para um botão */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: transparent;
+    font-size: 20px;
+    width: 200px;
+    padding: 21px 0px; /*21.5PX = Valor vertical do padding | 0px = Valor horizontal do padding (Aumentam ou diminuem a distância entre a borda e o topo*/
+    border-radius: 9px;
+    border : 3px solid var(--cor-tercearia);
+    transition: 1s;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none; /* Retira a formatação do texto para link */
+    color : var(--cor-secundaria);
+    font-family: var(--fonte-principal);
+}
+
+.container-main__conteudo__links__botao:hover{
+    border: 3px solid var(--cor-tercearia);
+    background-color:  var(--cor-secundaria);
+    transition: 1s;
+    color : var(--cor-primaria);
+    font-size: 25px;
+    
+}
+
+.rodape{
+    display: flex;
+    justify-content: center;
+    padding : 24px;
+    background-color: var(--cor-secundaria);
+    color :var(--cor-tercearia);
+    font-size: 24px;
+    font-family: var(--fonte-principal);
+}
