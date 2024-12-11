@@ -6,20 +6,42 @@
 }
 
 body{
-    height: 100vh; /* 100% viewport height = O body ocupa 100% da altura da tela */
+    /* height: 100vh = 100% viewport height = O body ocupa 100% da altura da tela */
     box-sizing: border-box;
     overflow : scroll;
     background-color:#11225f;
     color: #F5E2C8;        /* Cor de todos os textos */
-    margin : 12%;
     font-family: "Share Tech Mono", monospace;
 }
 
+.cabecalho__menu{
+    display : flex;
+    justify-content: space-between;
+    margin : 2% 8%;
+    font-size: 24px;
+}
+
+.cabecalho__menu__links{
+    border: transparent;
+    padding: 1% 3%;
+    gap : 5px;
+    border-radius: 16px;
+    cursor : pointer;
+    transition: 1s;
+}
+
+.cabecalho__menu__links:hover{
+    background-color: #f3f3f3be;
+    border: 2px solid transparent;
+    font-size: 27px;
+    color: #11225f;
+}
 .container-main{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin : 1%;
+    padding: 2% 14%;
+    padding-top: 5%;
 }
 
 .container-main__conteudo{
@@ -55,16 +77,28 @@ body{
     justify-content: space-between;
     margin: 7%;
     width: 520px;
+    gap : 25px;
 }
 
+.container-main__conteudo__links__título-botoes{
+    display: flex;
+    justify-content: center;
+    margin : 0%;
+    padding-top: 7%;
+    font-size: 30px;
+}
 .container-main__conteudo__links__botao{
     display: inline-block; /* Permitir que a tag <a> possa ser trabalhada com o comportamento para um botão */
-    background-color: #bd1e1e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: transparent;
     font-size: 20px;
     width: 200px;
     padding: 21px 0px; /*21.5PX = Valor vertical do padding | 0px = Valor horizontal do padding (Aumentam ou diminuem a distância entre a borda e o topo*/
-    border-radius: 16px;
-    border : 3px solid #F5E2C8;
+    border-radius: 9px;
+    border : 3px solid #bd1e1e;
     transition: 1s;
     cursor: pointer;
     text-align: center;
@@ -77,5 +111,17 @@ body{
     border: 3px solid #bd1e1e;
     background-color: #F5E2C8;
     transition: 1s;
+    color : #11225f;
+    font-size: 25px;
+    
+}
+
+.rodape{
+    display: flex;
+    justify-content: center;
+    padding : 24px;
+    background-color:#F5E2C8;
     color :#bd1e1e;
+    font-size: 24px;
+    font-family: "Share Tech Mono", monospace;
 }
