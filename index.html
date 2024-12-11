@@ -1,20 +1,59 @@
-<!DOCTYPE html> <!--//declaração que define este documento como um documento HTML 5 (ativar modo no-quirks)-->
-<html>  <!--abertura para inserção do código escrito em HTML-->
-    <head> <!--//contém as metainformações do arquivo HTML. Metainformações = Informações que descrevem e configuram o conteúdo-->
-        <meta charset="UTF-8"> <!--Define a biblioteca de linguagem (acentuação, semântica, etc) adotada para o código-->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Estabelece as configurações da página ao ser exbida em dispositivos web-->
-        <title>Portifolio</title> <!--refere-se ao título para a página HTML (que é mostrado na barra de título do navegador ou na guia da página)-->
-        <link rel="stylesheet" href="style.css"> <!--Linka arquivos externos com o arquivo HTML (rel = Relação do documento em relação ao arquivo HTML)-->
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Portifolio</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles-sheets/style.css">
+        <style>
+            .highlight{
+                background-color: transparent;
+                color: #bd1e1e;
+                font-weight: bold;
+            }
+        </style>
     </head>
-    <body> <!--define o corpo do documento, recipiente para todo o corpo visível-->
-        <h1>Heading 1</h1> <!--heading 1(Cabeçalho) : Insere uma mensagem em uma fonte de tamanho grande, título principal-->
-        <h2>Heading 2</h2> <!--heading 2(Cabeçalho) : Insere uma mensagem em uma fonte de tamanho médio, subtítulos-->
-        <h3>Heading 3</h3> <!--heading 3(Cabeçalho) : Insere uma mensagem em uma fonte pequeno, subtópicos -->
-        <p>Exemplo de parágrafo</p>  <!--Paragraf : Insere uma mensagem como parágrafo na tela-->
-        <img src="plano_de_fundo.png" alt="Logo Paython"> <!--Image : Insere uma imagem na ela/ src = sourch : endereço da imagem / alt : nome alternativo para essa imagem-->
-        <header></header> <!--Cabeçalho-->
-        <main></main>     <!--Conteúdo principal da página-->
-        <footer></footer> <!--Rodapé-->
-        <a></a> <!--Tag âncora : Permite a inserção de um texto contendo um link-->
+    <body>
+        <header class="cabecalho">
+            <nave class="cabecalho__menu"> <!--Cria um espaço para inserção de links para navegação na página-->
+                <a class="cabecalho__menu__links" href="index.html">Home</a>
+                <a class="cabecalho__menu__links" href="about.html">Sobre mim</a>
+                <a class="cabecalho__menu__links">Experiências</a>
+                <a class="cabecalho__menu__links">Conhecimentos Técnicos</a>
+                <a class="cabecalho__menu__links">Ambições</a>
+            </nave> 
+        </header>
+        <main class="container-main">
+            <section class="container-main__conteudo">
+                <h1 class="container-main__conteudo__titulo-principal">Seja bem-vindo(a) ao meu <mark class="highlight">Portifolio</mark></h1>
+                <h2 class="container-main__conteudo__subtitulo-principal">Aqui você saberá um pouco mais sobre mim, como :</h2>
+                <dl class="container-main__conteudo__lista">
+                <dt class="container-main__conteudo__destaque-lista">Experiências :</dt> 
+                <dd>Profissionais, Universitárias, Pessoais</dd>
+                <dt class="container-main__conteudo__destaque-lista">Conhecimentos Técnicos :</dt>
+                <dd>Formações, Especializações, Conhecimentos Adicionais</dd>
+                <dt class="container-main__conteudo__destaque-lista">Ambições :</dt>
+                <dd>Carreira, Pessoais, Profissionais</dd>
+                </dl>
+                <h2 class="container-main__conteudo__links__título-botoes">Entre em contato :</h2>
+                <div class="container-main__conteudo__links"> <!--Uso da tag div : Específico, agrupamento de elementos(nesse caso, agrupamento dos botões)-->
+                    <p><a class="container-main__conteudo__links__botao" href="https://www.linkedin.com/in/matheus-sena-30630b324/">
+                        <img src="assets/linkedin.png">
+                        Linkedin
+                    </a></p>
+                    <p><a class="container-main__conteudo__links__botao" href="https://github.com/MatheusSena02">
+                        <img src="assets/github.png" alt="logo github">
+                        Github
+                    </a></p>
+                    <p><a class="container-main__conteudo__links__botao" href="https://www.meucurriculoperfeito.com.br/lp/br/mprbrzlp01.aspx?utm_source=google&utm_medium=pmax&utm_campaign=16829499280&utm_term=&network=x&device=c&adposition=&adgroupid=&placement=&gad_source=1&gclid=EAIaIQobChMInsryhNmaigMVMA5ECB2Pciq5EAAYBCAAEgJAO_D_BwE">
+                        Currículo
+                    </a></p>
+                </div>
+            </section>
+            <img src="assets/plano_de_fundo_portifólio.png" alt = "Imagem Página Principal">
+        </main>
+        <footer>
+            <p class="rodape">Desenvolvido por Matheus Ribeiro de Sena</p>
+        </footer>
     </body>
 </html>
